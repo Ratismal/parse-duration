@@ -57,7 +57,7 @@ function parse(str){
   str.replace(duration, function(_, n, units){
     units = parse[units]
       || parse[units.toLowerCase().replace(/s$/, '')]
-      || 1
+      || 0
     result += parseFloat(n, 10) * units
   })
   return result
